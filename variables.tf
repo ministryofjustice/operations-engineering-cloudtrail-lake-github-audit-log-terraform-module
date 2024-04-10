@@ -75,7 +75,7 @@ variable "lambda_log_level" {
 variable "lambda_source_path" {
   type        = string
   description = "Path to the Lambda function source code, default to ./sources/lambda directory in the repository root. Modify this if you move the Terrform module working directory."
-  default     = "../../sources/lambda"
+  default     = "lambdas"
 }
 
 variable "tags" {
