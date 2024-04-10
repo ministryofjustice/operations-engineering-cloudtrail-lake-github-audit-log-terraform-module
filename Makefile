@@ -1,6 +1,6 @@
 TOPTARGETS := all clean build 
 
-SUBDIRS := $(wildcard sources/lambda/*/.)
+SUBDIRS := $(wildcard lambdas/*/.)
 BASE = $(shell /bin/pwd)
 
 $(TOPTARGETS): $(SUBDIRS)
