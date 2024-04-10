@@ -13,7 +13,7 @@ locals {
   s3_origin_account = length(var.github_auditlog_s3bucket_origin_account) != 0 ? var.github_auditlog_s3bucket_origin_account : data.aws_caller_identity.current.account_id
 
   lambda_timeout = 30
-  lambda_runtime = "python3.8"
+  lambda_runtime = "python3.10"
 
   lambda_source_path_s3reader = "lambdas/s3-reader/site-packages/"
   lambda_output_path_s3reader = "lambdas/s3-reader.zip"
