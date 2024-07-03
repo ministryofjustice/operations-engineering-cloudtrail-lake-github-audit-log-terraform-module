@@ -31,17 +31,13 @@ After you initiated the integration, a dedicated channel is configured to allow 
 
 ### Deploy using Terraform 
 
-Refer to the [Terraform module documentation](./terraform/terraform-aws-cloudtrail-lake-github-audit-log/README.md) to get started.
-
-### Deploy using SAM CLI
-
-Refer to the [SAM directory](./SAM/README.md) to get started.
+Refer to the [Terraform module documentation](./docs/terraform.md) to get started.
 
 ### (Optional) Using existing S3 bucket
 
 If you use an existing S3 bucket, follow instruction below to setup S3 event to Lambda function.
 
-Take the `GitHubS3ReaderFunction` ARN value from the SAM cli output or `github_auditlog_s3bucket` ARN value from the Terraform module output. The format will be: `arn:aws:lambda:{region}}:{account id}:function:GitHubS3ReaderFunction-{random-id}`
+Take the `github_auditlog_s3bucket` ARN value from the Terraform module output. The format will be: `arn:aws:lambda:{region}}:{account id}:function:GitHubS3ReaderFunction-{random-id}`
 
 Run command below to create S3 event notification configuration, replace the placeholder for Lambda ARN wit the value from SAM / Terraform module output.
 ```
