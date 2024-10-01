@@ -144,7 +144,7 @@ def transform_event(record):
         "requestParameters" : record,
         "recipientAccountId" : RECIPIENT_ACCOUNT_ID
     }
-    logger.debug(json.dumps(eventData))
+    logger.info(json.dumps(eventData))
     return eventData
 
 def generate_audit_events_payload(audit_events, event_id):
